@@ -1,0 +1,56 @@
+name: Enterprise CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  # --- Phase 1: Continuous Integration (Build & Push) ---
+  build-and-push:
+    name: Build Docker Image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and Push FastApi Image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: true
+          # Make sure this matches the image name in your docker-compose.yml!
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/cart-api:latest
+
+  # --- Phase 2: Continuous Deployment (AWS Server Update) ---
+  deploy:
+    name: Deploy to AWS EC2
+    needs: build-and-push # This ensures it only deploys IF the build was successful
+    runs-on: ubuntu-latest
+    steps:
+      - name: Execute Remote SSH Commands
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.AWS_HOST }}
+          username: ubuntu
+          key: ${{ secrets.AWS_SSH_KEY }}
+          script: |
+            echo "Connected to AWS EC2 successfully!"
+            cd ~/cart_apps
+            
+            # Pull any configuration changes (like updated docker-compose files)
+            git pull origin main
+            
+            # Pull the brand new Docker image we just built in Phase 1
+            sudo docker compose pull api
+            
+            # Recreate the FastAPI container with zero downtime to the Database
+            sudo docker compose up -d
+            
+            echo "Deployment Complete! 🚀"
