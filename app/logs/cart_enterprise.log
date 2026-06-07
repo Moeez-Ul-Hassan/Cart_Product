@@ -1,0 +1,128 @@
+2026-06-05 20:41:36,641 - cart_api - INFO - GET http://127.0.0.1:8000/
+2026-06-05 20:41:36,665 - cart_api - INFO - Response Status 200
+2026-06-05 20:41:44,782 - cart_api - INFO - GET http://127.0.0.1:8000/docs
+2026-06-05 20:41:44,783 - cart_api - INFO - Response Status 200
+2026-06-05 20:41:45,163 - cart_api - INFO - GET http://127.0.0.1:8000/openapi.json
+2026-06-05 20:41:45,380 - cart_api - INFO - Response Status 200
+2026-06-05 20:41:53,693 - cart_api - INFO - GET http://127.0.0.1:8000/docs
+2026-06-05 20:41:53,698 - cart_api - INFO - Response Status 200
+2026-06-05 20:41:53,889 - cart_api - INFO - GET http://127.0.0.1:8000/openapi.json
+2026-06-05 20:41:53,891 - cart_api - INFO - Response Status 200
+2026-06-05 20:42:07,881 - cart_api - INFO - GET http://127.0.0.1:8000/products/
+2026-06-05 20:42:08,049 - cart_api - INFO - Response Status 200
+2026-06-05 20:43:44,351 - cart_api - INFO - POST http://127.0.0.1:8000/users/
+2026-06-05 20:43:44,811 - cart_api - INFO - Response Status 201
+2026-06-05 20:45:06,569 - cart_api - INFO - POST http://127.0.0.1:8000/users/
+2026-06-05 20:45:06,574 - cart_api - INFO - Response Status 400
+2026-06-05 20:45:20,684 - cart_api - INFO - POST http://127.0.0.1:8000/users/
+2026-06-05 20:45:20,892 - cart_api - INFO - Response Status 201
+2026-06-05 20:46:42,788 - cart_api - INFO - GET http://127.0.0.1:8000/users/
+2026-06-05 20:46:42,847 - cart_api - INFO - Response Status 200
+2026-06-05 20:47:38,475 - cart_api - INFO - POST http://127.0.0.1:8000/products/
+2026-06-05 20:47:38,910 - cart_api - INFO - Response Status 201
+2026-06-05 20:48:18,301 - cart_api - INFO - GET http://127.0.0.1:8000/cart/1
+2026-06-05 20:48:18,570 - cart_api - INFO - Response Status 200
+2026-06-05 20:48:36,817 - cart_api - INFO - GET http://127.0.0.1:8000/cart/2
+2026-06-05 20:48:36,824 - cart_api - INFO - Response Status 200
+2026-06-05 20:48:44,558 - cart_api - INFO - GET http://127.0.0.1:8000/cart/333
+2026-06-05 20:48:44,562 - cart_api - INFO - Response Status 404
+2026-06-06 00:17:31,106 - cart_api - INFO - POST http://127.0.0.1:8000/users/
+2026-06-06 00:17:31,145 - cart_api - INFO - Response Status 422
+2026-06-06 00:23:15,097 - cart_api - INFO - POST http://127.0.0.1:8000/users/
+2026-06-06 00:23:15,464 - cart_api - INFO - Response Status 201
+2026-06-06 01:14:01,396 - cart_api - INFO - POST http://127.0.0.1:8000/users/
+2026-06-06 01:14:01,713 - cart_api - INFO - Response Status 422
+2026-06-06 01:32:49,367 - cart_api - INFO - POST http://127.0.0.1:8000/users/
+2026-06-06 01:32:50,062 - cart_api - INFO - Response Status 201
+2026-06-06 01:36:15,759 - cart_api - INFO - POST http://127.0.0.1:8000/users/
+2026-06-06 01:36:15,865 - cart_api - INFO - Response Status 422
+2026-06-06 01:37:39,776 - cart_api - INFO - POST http://127.0.0.1:8000/users/
+2026-06-06 01:37:39,910 - cart_api - INFO - Response Status 400
+2026-06-06 01:39:16,582 - cart_api - INFO - POST http://127.0.0.1:8000/users/
+2026-06-06 01:39:16,600 - cart_api - INFO - Response Status 400
+2026-06-06 01:39:16,762 - cart_api - INFO - POST http://127.0.0.1:8000/users/
+2026-06-06 01:39:16,772 - cart_api - INFO - Response Status 400
+2026-06-06 01:46:21,693 - cart_api - INFO - POST http://127.0.0.1:8000/users/
+2026-06-06 01:46:21,754 - cart_api - INFO - Response Status 422
+2026-06-06 01:49:33,605 - cart_api - INFO - POST http://127.0.0.1:8000/users/
+2026-06-06 01:49:33,722 - cart_api - INFO - Response Status 422
+2026-06-06 01:57:39,374 - cart_api - INFO - POST http://127.0.0.1:8000/users/18
+2026-06-06 01:57:39,392 - cart_api - INFO - Response Status 405
+2026-06-06 01:57:52,207 - cart_api - INFO - PUT http://127.0.0.1:8000/users/18
+2026-06-06 01:57:52,569 - cart_api - INFO - Response Status 200
+2026-06-07 03:21:10,471 - cart_api - INFO - POST http://127.0.0.1:8000/products/
+2026-06-07 03:21:11,262 - cart_api - INFO - Response Status 201
+2026-06-07 03:24:14,097 - cart_api - INFO - POST http://127.0.0.1:8000/products/
+2026-06-07 03:24:14,112 - cart_api - INFO - Response Status 400
+2026-06-07 03:25:42,906 - cart_api - INFO - POST http://127.0.0.1:8000/products/
+2026-06-07 03:25:43,062 - cart_api - INFO - Response Status 422
+2026-06-07 03:30:51,603 - cart_api - INFO - POST http://127.0.0.1:8000/products/
+2026-06-07 03:30:51,699 - cart_api - WARNING - Validation Error on price: Input should be a valid number, unable to parse string as a number
+2026-06-07 03:30:51,700 - cart_api - INFO - Response Status 422
+2026-06-07 03:41:51,998 - cart_api - INFO - POST http://127.0.0.1:8000/products/1/stock
+2026-06-07 03:41:51,999 - cart_api - INFO - Response Status 405
+2026-06-07 03:42:11,296 - cart_api - INFO - PATCH http://127.0.0.1:8000/products/1/stock
+2026-06-07 03:42:11,727 - cart_api - INFO - Response Status 200
+2026-06-07 13:41:13,188 - cart_api - INFO - PATCH http://127.0.0.1:8000/products/1/stock
+2026-06-07 13:41:13,252 - cart_api - INFO - Response Status 400
+2026-06-07 13:46:17,864 - cart_api - INFO - POST http://127.0.0.1:8000/cart/users/8/
+2026-06-07 13:46:18,217 - cart_api - INFO - Response Status 201
+2026-06-07 13:48:14,467 - cart_api - INFO - POST http://127.0.0.1:8000/cart/8/items
+2026-06-07 13:48:14,469 - cart_api - INFO - Response Status 307
+2026-06-07 13:48:14,475 - cart_api - INFO - POST http://127.0.0.1:8000/cart/8/items/
+2026-06-07 13:48:14,492 - cart_api - INFO - Response Status 404
+2026-06-07 13:48:26,755 - cart_api - INFO - POST http://127.0.0.1:8000/cart/6/items
+2026-06-07 13:48:26,755 - cart_api - INFO - Response Status 307
+2026-06-07 13:48:26,761 - cart_api - INFO - POST http://127.0.0.1:8000/cart/6/items/
+2026-06-07 13:48:27,008 - cart_api - INFO - Response Status 201
+2026-06-07 13:49:42,834 - cart_api - INFO - POST http://127.0.0.1:8000/cart/6/items
+2026-06-07 13:49:42,834 - cart_api - INFO - Response Status 307
+2026-06-07 13:49:42,847 - cart_api - INFO - POST http://127.0.0.1:8000/cart/6/items/
+2026-06-07 13:49:42,852 - cart_api - INFO - Response Status 400
+2026-06-07 13:51:57,585 - cart_api - INFO - POST http://127.0.0.1:8000/cart/6/items
+2026-06-07 13:51:57,585 - cart_api - INFO - Response Status 307
+2026-06-07 13:51:57,595 - cart_api - INFO - POST http://127.0.0.1:8000/cart/6/items/
+2026-06-07 13:51:57,605 - cart_api - INFO - Response Status 400
+2026-06-07 13:59:36,612 - cart_api - INFO - POST http://127.0.0.1:8000/cart/6/checkout
+2026-06-07 13:59:36,620 - cart_api - INFO - Response Status 400
+2026-06-07 14:02:40,081 - cart_api - INFO - POST http://127.0.0.1:8000/cart/6/items
+2026-06-07 14:02:40,081 - cart_api - INFO - Response Status 307
+2026-06-07 14:02:40,087 - cart_api - INFO - POST http://127.0.0.1:8000/cart/6/items/
+2026-06-07 14:02:40,373 - cart_api - INFO - Response Status 201
+2026-06-07 14:14:48,399 - cart_api - INFO - POST http://127.0.0.1:8000/cart/6/items
+2026-06-07 14:14:48,399 - cart_api - INFO - Response Status 307
+2026-06-07 14:14:48,410 - cart_api - INFO - POST http://127.0.0.1:8000/cart/6/items/
+2026-06-07 14:14:48,695 - cart_api - INFO - Response Status 201
+2026-06-07 14:16:11,058 - cart_api - INFO - POST http://127.0.0.1:8000/cart/6/checkout
+2026-06-07 14:16:11,248 - cart_api - INFO - Response Status 200
+2026-06-07 14:24:42,781 - cart_api - INFO - POST http://127.0.0.1:8000/cart/6/checkout
+2026-06-07 14:24:42,796 - cart_api - INFO - Response Status 400
+2026-06-07 14:34:20,235 - cart_api - INFO - GET http://127.0.0.1:8000/users/
+2026-06-07 14:34:20,459 - cart_api - INFO - Response Status 200
+2026-06-07 14:35:56,689 - cart_api - INFO - GET http://127.0.0.1:8000/users/18
+2026-06-07 14:35:56,703 - cart_api - INFO - Response Status 200
+2026-06-07 14:38:48,646 - cart_api - INFO - POST http://127.0.0.1:8000/users/999
+2026-06-07 14:38:48,646 - cart_api - INFO - Response Status 405
+2026-06-07 14:39:12,494 - cart_api - INFO - GET http://127.0.0.1:8000/users/999
+2026-06-07 14:39:12,499 - cart_api - INFO - Response Status 404
+2026-06-07 14:46:24,428 - cart_api - INFO - DELETE http://127.0.0.1:8000/users/18
+2026-06-07 14:46:24,612 - cart_api - INFO - Response Status 204
+2026-06-07 14:48:10,674 - cart_api - INFO - GET http://127.0.0.1:8000/users/18
+2026-06-07 14:48:10,690 - cart_api - INFO - Response Status 404
+2026-06-07 15:14:21,184 - cart_api - INFO - POST http://127.0.0.1:8000/products/
+2026-06-07 15:14:21,658 - cart_api - INFO - Response Status 201
+2026-06-07 15:16:15,494 - cart_api - INFO - POST http://127.0.0.1:8000/products/
+2026-06-07 15:16:15,685 - cart_api - INFO - Response Status 201
+2026-06-07 15:17:59,344 - cart_api - INFO - POST http://127.0.0.1:8000/products/
+2026-06-07 15:17:59,544 - cart_api - WARNING - Validation Error on body: Field required
+2026-06-07 15:17:59,544 - cart_api - INFO - Response Status 422
+2026-06-07 15:18:09,640 - cart_api - INFO - GET http://127.0.0.1:8000/products/
+2026-06-07 15:18:09,652 - cart_api - INFO - Response Status 200
+2026-06-07 15:19:38,627 - cart_api - INFO - GET http://127.0.0.1:8000/products/2
+2026-06-07 15:19:38,644 - cart_api - INFO - Response Status 200
+2026-06-07 15:20:31,225 - cart_api - INFO - GET http://127.0.0.1:8000/products/999
+2026-06-07 15:20:31,236 - cart_api - INFO - Response Status 404
+2026-06-07 15:22:45,521 - cart_api - INFO - DELETE http://127.0.0.1:8000/products/2
+2026-06-07 15:22:45,701 - cart_api - INFO - Response Status 204
+2026-06-07 15:23:57,933 - cart_api - INFO - GET http://127.0.0.1:8000/products/2
+2026-06-07 15:23:57,946 - cart_api - INFO - Response Status 404

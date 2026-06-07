@@ -1,0 +1,42 @@
+services:
+  api:
+    # In CI/CD, this image will automatically be pulled from Docker Hub
+    image: moeezul/cart-api:latest 
+    container_name: production_fastapi_app
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      # Dynamically injects the credentials from the environment
+      - DATABASE_URL=mysql+pymysql://${DB_USER}:${DB_PASSWORD}@db:3306/${DB_NAME}
+      - PYTHONPATH=/app/app
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mysql:8.0-debian
+    container_name: production_mysql_db
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      # Dynamically injects the database credentials
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+    command: >
+      --performance_schema=off
+      --innodb_buffer_pool_size=64M
+      --innodb_log_buffer_size=1M
+      --max_connections=10
+    volumes:
+      - mysql_production_data:/var/lib/mysql
+    healthcheck:
+      # Dynamically uses the password for the health ping
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p=${DB_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  mysql_production_data:

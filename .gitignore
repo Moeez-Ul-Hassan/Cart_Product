@@ -1,13 +1,23 @@
 # Environments
-venv/
-env/
+.env
+.env.*
 
-# Python Cache
+# Python bytecode
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.pytest_cache/
 
-# Logs
-*.log
+# Databases
+*.db
+*.sqlite3
 
-# OS generated files
-.DS_Store
+# IDEs and editors
+.vscode/
+.idea/
+
+venv/
+.venv/
+env/
+
