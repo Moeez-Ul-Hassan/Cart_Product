@@ -11,7 +11,7 @@ from core.exception_handlers import global_exception_handler, validation_excepti
 Base.metadata.create_all(bind=engine)
 
 # 2. Initialize App
-app = FastAPI(title="Enterprise Cart API")
+app = FastAPI(title="Cart Service API")
 
 # 3. Middleware
 app.add_middleware(
