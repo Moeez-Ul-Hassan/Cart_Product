@@ -1,0 +1,326 @@
+2026-06-08 22:04:31,121 - cart_api - INFO - GET http://testserver/products
+2026-06-08 22:04:31,123 - cart_api - INFO - Response Status 307
+2026-06-08 22:04:31,128 - cart_api - INFO - GET http://testserver/products/
+2026-06-08 22:04:33,278 - cart_api - ERROR - Unhandled Exception: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-06-08 22:04:50,515 - cart_api - INFO - GET http://testserver/products?limit=5
+2026-06-08 22:04:50,518 - cart_api - INFO - Response Status 307
+2026-06-08 22:04:50,521 - cart_api - INFO - GET http://testserver/products/?limit=5
+2026-06-08 22:04:52,605 - cart_api - ERROR - Unhandled Exception: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-06-08 22:04:53,357 - cart_api - INFO - GET http://testserver/products/1
+2026-06-08 22:04:56,191 - cart_api - ERROR - Unhandled Exception: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-06-08 22:04:57,367 - cart_api - INFO - GET http://testserver/products/99999
+2026-06-08 22:04:59,558 - cart_api - ERROR - Unhandled Exception: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-06-08 22:05:00,537 - cart_api - INFO - GET http://testserver/products/abc
+2026-06-08 22:05:02,409 - cart_api - WARNING - Validation Error on product_id: Input should be a valid integer, unable to parse string as an integer
+2026-06-08 22:05:02,409 - cart_api - INFO - Response Status 422
+2026-06-08 22:05:02,415 - cart_api - INFO - POST http://testserver/products
+2026-06-08 22:05:02,415 - cart_api - INFO - Response Status 307
+2026-06-08 22:05:02,418 - cart_api - INFO - POST http://testserver/products/
+2026-06-08 22:05:05,193 - cart_api - ERROR - Unhandled Exception: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-06-08 22:05:06,863 - cart_api - INFO - POST http://testserver/products
+2026-06-08 22:05:06,864 - cart_api - INFO - Response Status 307
+2026-06-08 22:05:06,867 - cart_api - INFO - POST http://testserver/products/
+2026-06-08 22:05:06,869 - cart_api - WARNING - Validation Error on price: Field required
+2026-06-08 22:05:06,869 - cart_api - INFO - Response Status 422
+2026-06-08 22:05:06,874 - cart_api - INFO - POST http://testserver/products
+2026-06-08 22:05:06,874 - cart_api - INFO - Response Status 307
+2026-06-08 22:05:06,878 - cart_api - INFO - POST http://testserver/products/
+2026-06-08 22:05:06,880 - cart_api - INFO - Response Status 400
+2026-06-08 22:05:06,893 - cart_api - INFO - PUT http://testserver/products/1
+2026-06-08 22:05:06,894 - cart_api - INFO - Response Status 405
+2026-06-08 22:05:06,907 - cart_api - INFO - DELETE http://testserver/products/1
+2026-06-08 22:05:09,002 - cart_api - ERROR - Unhandled Exception: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] No connection could be made because the target machine actively refused it)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-06-08 22:05:09,783 - cart_api - INFO - GET http://testserver/cart
+2026-06-08 22:05:09,784 - cart_api - INFO - Response Status 404
+2026-06-08 22:05:09,794 - cart_api - INFO - POST http://testserver/cart
+2026-06-08 22:05:09,795 - cart_api - INFO - Response Status 404
+2026-06-08 22:05:09,807 - cart_api - INFO - POST http://testserver/cart/items
+2026-06-08 22:05:09,807 - cart_api - INFO - Response Status 405
+2026-06-08 22:05:09,878 - cart_api - INFO - POST http://testserver/cart/items
+2026-06-08 22:05:09,878 - cart_api - INFO - Response Status 405
+2026-06-08 22:05:09,903 - cart_api - INFO - POST http://testserver/cart/items
+2026-06-08 22:05:09,904 - cart_api - INFO - Response Status 405
+2026-06-08 22:05:09,921 - cart_api - INFO - POST http://testserver/cart/items
+2026-06-08 22:05:09,921 - cart_api - INFO - Response Status 405
+2026-06-08 22:05:09,935 - cart_api - INFO - POST http://testserver/cart/items
+2026-06-08 22:05:09,935 - cart_api - INFO - Response Status 405
+2026-06-08 22:05:09,950 - cart_api - INFO - PUT http://testserver/cart/items/1
+2026-06-08 22:05:09,950 - cart_api - INFO - Response Status 404
+2026-06-08 22:05:09,957 - cart_api - INFO - PUT http://testserver/cart/items/1
+2026-06-08 22:05:09,958 - cart_api - INFO - Response Status 404
+2026-06-08 22:05:09,971 - cart_api - INFO - DELETE http://testserver/cart/items/1
+2026-06-08 22:05:09,972 - cart_api - INFO - Response Status 404
+2026-06-08 22:05:09,979 - cart_api - INFO - DELETE http://testserver/cart/items/abc
+2026-06-08 22:05:09,981 - cart_api - INFO - Response Status 404
+2026-06-08 22:05:09,993 - cart_api - INFO - DELETE http://testserver/cart
+2026-06-08 22:05:09,994 - cart_api - INFO - Response Status 404
+2026-06-08 22:05:10,006 - cart_api - INFO - POST http://testserver/orders/checkout
+2026-06-08 22:05:10,007 - cart_api - INFO - Response Status 404
+2026-06-08 22:05:10,019 - cart_api - INFO - POST http://testserver/orders/checkout
+2026-06-08 22:05:10,019 - cart_api - INFO - Response Status 404
+2026-06-08 22:05:10,030 - cart_api - INFO - POST http://testserver/orders/checkout
+2026-06-08 22:05:10,031 - cart_api - INFO - Response Status 404
+2026-06-08 22:05:10,043 - cart_api - INFO - POST http://testserver/orders/checkout
+2026-06-08 22:05:10,044 - cart_api - INFO - Response Status 404
+2026-06-08 22:05:10,059 - cart_api - INFO - GET http://testserver/orders
+2026-06-08 22:05:10,060 - cart_api - INFO - Response Status 404
+2026-06-08 22:05:10,073 - cart_api - INFO - GET http://testserver/orders/1
+2026-06-08 22:05:10,073 - cart_api - INFO - Response Status 404
+2026-06-08 22:05:10,082 - cart_api - INFO - GET http://testserver/orders/99999
+2026-06-08 22:05:10,082 - cart_api - INFO - Response Status 404
+2026-06-08 22:05:10,090 - cart_api - INFO - GET http://testserver/invalid-secret-route
+2026-06-08 22:05:10,091 - cart_api - INFO - Response Status 404
+2026-06-08 22:12:04,286 - cart_api - INFO - GET http://testserver/products
+2026-06-08 22:12:04,287 - cart_api - INFO - Response Status 307
+2026-06-08 22:12:04,291 - cart_api - INFO - GET http://testserver/products/
+2026-06-08 22:12:04,344 - cart_api - INFO - Response Status 200
+2026-06-08 22:12:04,349 - cart_api - INFO - GET http://testserver/products?limit=5
+2026-06-08 22:12:04,349 - cart_api - INFO - Response Status 307
+2026-06-08 22:12:04,351 - cart_api - INFO - GET http://testserver/products/?limit=5
+2026-06-08 22:12:04,354 - cart_api - INFO - Response Status 200
+2026-06-08 22:12:04,359 - cart_api - INFO - GET http://testserver/products/1
+2026-06-08 22:12:04,363 - cart_api - INFO - Response Status 404
+2026-06-08 22:12:04,368 - cart_api - INFO - GET http://testserver/products/99999
+2026-06-08 22:12:04,371 - cart_api - INFO - Response Status 404
+2026-06-08 22:12:04,379 - cart_api - INFO - GET http://testserver/products/abc
+2026-06-08 22:12:04,381 - cart_api - WARNING - Validation Error on product_id: Input should be a valid integer, unable to parse string as an integer
+2026-06-08 22:12:04,381 - cart_api - INFO - Response Status 422
+2026-06-08 22:12:04,388 - cart_api - INFO - POST http://testserver/products
+2026-06-08 22:12:04,388 - cart_api - INFO - Response Status 307
+2026-06-08 22:12:04,391 - cart_api - INFO - POST http://testserver/products/
+2026-06-08 22:12:04,448 - cart_api - INFO - Response Status 201
+2026-06-08 22:12:04,455 - cart_api - INFO - POST http://testserver/products
+2026-06-08 22:12:04,455 - cart_api - INFO - Response Status 307
+2026-06-08 22:12:04,458 - cart_api - INFO - POST http://testserver/products/
+2026-06-08 22:12:04,459 - cart_api - WARNING - Validation Error on price: Field required
+2026-06-08 22:12:04,460 - cart_api - INFO - Response Status 422
+2026-06-08 22:12:04,463 - cart_api - INFO - POST http://testserver/products
+2026-06-08 22:12:04,463 - cart_api - INFO - Response Status 307
+2026-06-08 22:12:04,465 - cart_api - INFO - POST http://testserver/products/
+2026-06-08 22:12:04,469 - cart_api - INFO - Response Status 400
+2026-06-08 22:12:04,558 - cart_api - INFO - PUT http://testserver/products/1
+2026-06-08 22:12:04,558 - cart_api - INFO - Response Status 405
+2026-06-08 22:12:04,567 - cart_api - INFO - DELETE http://testserver/products/1
+2026-06-08 22:12:04,580 - cart_api - INFO - Response Status 204
+2026-06-08 22:12:04,596 - cart_api - INFO - GET http://testserver/cart
+2026-06-08 22:12:04,597 - cart_api - INFO - Response Status 404
+2026-06-08 22:12:04,614 - cart_api - INFO - POST http://testserver/cart
+2026-06-08 22:12:04,615 - cart_api - INFO - Response Status 404
+2026-06-08 22:12:04,644 - cart_api - INFO - POST http://testserver/cart/items
+2026-06-08 22:12:04,644 - cart_api - INFO - Response Status 405
+2026-06-08 22:12:04,664 - cart_api - INFO - POST http://testserver/cart/items
+2026-06-08 22:12:04,664 - cart_api - INFO - Response Status 405
+2026-06-08 22:12:04,685 - cart_api - INFO - POST http://testserver/cart/items
+2026-06-08 22:12:04,686 - cart_api - INFO - Response Status 405
+2026-06-08 22:12:04,706 - cart_api - INFO - POST http://testserver/cart/items
+2026-06-08 22:12:04,869 - cart_api - INFO - Response Status 405
+2026-06-08 22:12:04,890 - cart_api - INFO - POST http://testserver/cart/items
+2026-06-08 22:12:04,891 - cart_api - INFO - Response Status 405
+2026-06-08 22:12:04,908 - cart_api - INFO - PUT http://testserver/cart/items/1
+2026-06-08 22:12:04,908 - cart_api - INFO - Response Status 404
+2026-06-08 22:12:04,915 - cart_api - INFO - PUT http://testserver/cart/items/1
+2026-06-08 22:12:04,915 - cart_api - INFO - Response Status 404
+2026-06-08 22:12:04,926 - cart_api - INFO - DELETE http://testserver/cart/items/1
+2026-06-08 22:12:04,927 - cart_api - INFO - Response Status 404
+2026-06-08 22:12:04,931 - cart_api - INFO - DELETE http://testserver/cart/items/abc
+2026-06-08 22:12:04,931 - cart_api - INFO - Response Status 404
+2026-06-08 22:12:04,943 - cart_api - INFO - DELETE http://testserver/cart
+2026-06-08 22:12:04,944 - cart_api - INFO - Response Status 404
+2026-06-08 22:12:04,956 - cart_api - INFO - POST http://testserver/orders/checkout
+2026-06-08 22:12:04,957 - cart_api - INFO - Response Status 404
+2026-06-08 22:12:05,005 - cart_api - INFO - POST http://testserver/orders/checkout
+2026-06-08 22:12:05,006 - cart_api - INFO - Response Status 404
+2026-06-08 22:12:05,017 - cart_api - INFO - POST http://testserver/orders/checkout
+2026-06-08 22:12:05,017 - cart_api - INFO - Response Status 404
+2026-06-08 22:12:05,033 - cart_api - INFO - POST http://testserver/orders/checkout
+2026-06-08 22:12:05,034 - cart_api - INFO - Response Status 404
+2026-06-08 22:12:05,054 - cart_api - INFO - GET http://testserver/orders
+2026-06-08 22:12:05,054 - cart_api - INFO - Response Status 404
+2026-06-08 22:12:05,071 - cart_api - INFO - GET http://testserver/orders/1
+2026-06-08 22:12:05,072 - cart_api - INFO - Response Status 404
+2026-06-08 22:12:05,081 - cart_api - INFO - GET http://testserver/orders/99999
+2026-06-08 22:12:05,081 - cart_api - INFO - Response Status 404
+2026-06-08 22:12:05,093 - cart_api - INFO - GET http://testserver/invalid-secret-route
+2026-06-08 22:12:05,094 - cart_api - INFO - Response Status 404
+2026-06-08 22:24:08,309 - cart_api - INFO - GET http://testserver/products
+2026-06-08 22:24:08,405 - cart_api - INFO - Response Status 307
+2026-06-08 22:24:08,408 - cart_api - INFO - GET http://testserver/products/
+2026-06-08 22:24:08,636 - cart_api - INFO - Response Status 200
+2026-06-08 22:24:08,643 - cart_api - INFO - GET http://testserver/products?limit=5
+2026-06-08 22:24:08,643 - cart_api - INFO - Response Status 307
+2026-06-08 22:24:08,646 - cart_api - INFO - GET http://testserver/products/?limit=5
+2026-06-08 22:24:08,648 - cart_api - INFO - Response Status 200
+2026-06-08 22:24:08,652 - cart_api - INFO - GET http://testserver/products/1
+2026-06-08 22:24:08,681 - cart_api - INFO - Response Status 404
+2026-06-08 22:24:08,686 - cart_api - INFO - GET http://testserver/products/99999
+2026-06-08 22:24:08,688 - cart_api - INFO - Response Status 404
+2026-06-08 22:24:08,692 - cart_api - INFO - GET http://testserver/products/abc
+2026-06-08 22:24:08,795 - cart_api - WARNING - Validation Error on product_id: Input should be a valid integer, unable to parse string as an integer
+2026-06-08 22:24:08,796 - cart_api - INFO - Response Status 422
+2026-06-08 22:24:08,800 - cart_api - INFO - POST http://testserver/products
+2026-06-08 22:24:08,800 - cart_api - INFO - Response Status 307
+2026-06-08 22:24:08,803 - cart_api - INFO - POST http://testserver/products/
+2026-06-08 22:24:09,041 - cart_api - INFO - Response Status 201
+2026-06-08 22:24:09,049 - cart_api - INFO - POST http://testserver/products
+2026-06-08 22:24:09,049 - cart_api - INFO - Response Status 307
+2026-06-08 22:24:09,052 - cart_api - INFO - POST http://testserver/products/
+2026-06-08 22:24:09,053 - cart_api - WARNING - Validation Error on price: Field required
+2026-06-08 22:24:09,053 - cart_api - INFO - Response Status 422
+2026-06-08 22:24:09,058 - cart_api - INFO - POST http://testserver/products
+2026-06-08 22:24:09,059 - cart_api - INFO - Response Status 307
+2026-06-08 22:24:09,061 - cart_api - INFO - POST http://testserver/products/
+2026-06-08 22:24:09,064 - cart_api - INFO - Response Status 400
+2026-06-08 22:24:09,068 - cart_api - INFO - PUT http://testserver/products/1
+2026-06-08 22:24:09,208 - cart_api - INFO - Response Status 200
+2026-06-08 22:24:09,214 - cart_api - INFO - DELETE http://testserver/products/1
+2026-06-08 22:24:09,218 - cart_api - INFO - Response Status 204
+2026-06-08 22:24:09,223 - cart_api - INFO - GET http://testserver/cart
+2026-06-08 22:24:09,223 - cart_api - INFO - Response Status 404
+2026-06-08 22:24:09,318 - cart_api - INFO - POST http://testserver/cart
+2026-06-08 22:24:09,318 - cart_api - INFO - Response Status 404
+2026-06-08 22:24:09,327 - cart_api - INFO - POST http://testserver/cart/items
+2026-06-08 22:24:09,327 - cart_api - INFO - Response Status 405
+2026-06-08 22:24:09,337 - cart_api - INFO - POST http://testserver/cart/items
+2026-06-08 22:24:09,338 - cart_api - INFO - Response Status 405
+2026-06-08 22:24:09,348 - cart_api - INFO - POST http://testserver/cart/items
+2026-06-08 22:24:09,348 - cart_api - INFO - Response Status 405
+2026-06-08 22:24:09,356 - cart_api - INFO - POST http://testserver/cart/items
+2026-06-08 22:24:09,356 - cart_api - INFO - Response Status 405
+2026-06-08 22:24:09,365 - cart_api - INFO - POST http://testserver/cart/items
+2026-06-08 22:24:09,366 - cart_api - INFO - Response Status 405
+2026-06-08 22:24:09,374 - cart_api - INFO - PUT http://testserver/cart/items/1
+2026-06-08 22:24:09,374 - cart_api - INFO - Response Status 404
+2026-06-08 22:24:09,379 - cart_api - INFO - PUT http://testserver/cart/items/1
+2026-06-08 22:24:09,380 - cart_api - INFO - Response Status 404
+2026-06-08 22:24:09,388 - cart_api - INFO - DELETE http://testserver/cart/items/1
+2026-06-08 22:24:09,389 - cart_api - INFO - Response Status 404
+2026-06-08 22:24:09,393 - cart_api - INFO - DELETE http://testserver/cart/items/abc
+2026-06-08 22:24:09,393 - cart_api - INFO - Response Status 404
+2026-06-08 22:24:09,403 - cart_api - INFO - DELETE http://testserver/cart
+2026-06-08 22:24:09,404 - cart_api - INFO - Response Status 404
+2026-06-08 22:24:09,414 - cart_api - INFO - POST http://testserver/orders/checkout
+2026-06-08 22:24:09,415 - cart_api - INFO - Response Status 404
+2026-06-08 22:24:09,423 - cart_api - INFO - POST http://testserver/orders/checkout
+2026-06-08 22:24:09,423 - cart_api - INFO - Response Status 404
+2026-06-08 22:24:09,468 - cart_api - INFO - POST http://testserver/orders/checkout
+2026-06-08 22:24:09,469 - cart_api - INFO - Response Status 404
+2026-06-08 22:24:09,479 - cart_api - INFO - POST http://testserver/orders/checkout
+2026-06-08 22:24:09,480 - cart_api - INFO - Response Status 404
+2026-06-08 22:24:09,491 - cart_api - INFO - GET http://testserver/orders
+2026-06-08 22:24:09,491 - cart_api - INFO - Response Status 404
+2026-06-08 22:24:09,502 - cart_api - INFO - GET http://testserver/orders/1
+2026-06-08 22:24:09,503 - cart_api - INFO - Response Status 404
+2026-06-08 22:24:09,509 - cart_api - INFO - GET http://testserver/orders/99999
+2026-06-08 22:24:09,648 - cart_api - INFO - Response Status 404
+2026-06-08 22:24:09,653 - cart_api - INFO - GET http://testserver/invalid-secret-route
+2026-06-08 22:24:09,653 - cart_api - INFO - Response Status 404
+2026-06-08 22:32:06,168 - cart_api - INFO - GET http://testserver/products
+2026-06-08 22:32:06,235 - cart_api - INFO - Response Status 307
+2026-06-08 22:32:06,241 - cart_api - INFO - GET http://testserver/products/
+2026-06-08 22:32:06,254 - cart_api - INFO - Response Status 200
+2026-06-08 22:32:06,261 - cart_api - INFO - GET http://testserver/products?limit=5
+2026-06-08 22:32:06,262 - cart_api - INFO - Response Status 307
+2026-06-08 22:32:06,265 - cart_api - INFO - GET http://testserver/products/?limit=5
+2026-06-08 22:32:06,267 - cart_api - INFO - Response Status 200
+2026-06-08 22:32:06,274 - cart_api - INFO - GET http://testserver/products/1
+2026-06-08 22:32:06,278 - cart_api - INFO - Response Status 404
+2026-06-08 22:32:06,284 - cart_api - INFO - GET http://testserver/products/99999
+2026-06-08 22:32:06,287 - cart_api - INFO - Response Status 404
+2026-06-08 22:32:06,294 - cart_api - INFO - GET http://testserver/products/abc
+2026-06-08 22:32:06,297 - cart_api - WARNING - Validation Error on product_id: Input should be a valid integer, unable to parse string as an integer
+2026-06-08 22:32:06,297 - cart_api - INFO - Response Status 422
+2026-06-08 22:32:06,300 - cart_api - INFO - POST http://testserver/products
+2026-06-08 22:32:06,302 - cart_api - INFO - Response Status 307
+2026-06-08 22:32:06,305 - cart_api - INFO - POST http://testserver/products/
+2026-06-08 22:32:06,312 - cart_api - INFO - Response Status 201
+2026-06-08 22:32:06,319 - cart_api - INFO - POST http://testserver/products
+2026-06-08 22:32:06,319 - cart_api - INFO - Response Status 307
+2026-06-08 22:32:06,323 - cart_api - INFO - POST http://testserver/products/
+2026-06-08 22:32:06,327 - cart_api - WARNING - Validation Error on price: Field required
+2026-06-08 22:32:06,327 - cart_api - INFO - Response Status 422
+2026-06-08 22:32:06,333 - cart_api - INFO - POST http://testserver/products
+2026-06-08 22:32:06,335 - cart_api - INFO - Response Status 307
+2026-06-08 22:32:06,338 - cart_api - INFO - POST http://testserver/products/
+2026-06-08 22:32:06,342 - cart_api - INFO - Response Status 400
+2026-06-08 22:32:06,351 - cart_api - INFO - PUT http://testserver/products/1
+2026-06-08 22:32:06,606 - cart_api - INFO - Response Status 200
+2026-06-08 22:32:06,614 - cart_api - INFO - DELETE http://testserver/products/1
+2026-06-08 22:32:06,624 - cart_api - INFO - Response Status 204
+2026-06-08 22:32:06,632 - cart_api - INFO - POST http://testserver/cart/users/1/
+2026-06-08 22:32:06,637 - cart_api - INFO - Response Status 404
+2026-06-08 22:32:06,643 - cart_api - INFO - GET http://testserver/cart/1
+2026-06-08 22:32:06,647 - cart_api - INFO - Response Status 404
+2026-06-08 22:32:06,651 - cart_api - INFO - POST http://testserver/cart/1/items/
+2026-06-08 22:32:06,654 - cart_api - INFO - Response Status 404
+2026-06-08 22:32:06,660 - cart_api - INFO - POST http://testserver/cart/1/items/
+2026-06-08 22:32:06,661 - cart_api - INFO - Response Status 400
+2026-06-08 22:32:06,777 - cart_api - INFO - POST http://testserver/cart/1/items/
+2026-06-08 22:32:06,779 - cart_api - WARNING - Validation Error on product_id: Field required
+2026-06-08 22:32:06,779 - cart_api - INFO - Response Status 422
+2026-06-08 22:32:06,784 - cart_api - INFO - POST http://testserver/cart/1/checkout
+2026-06-08 22:32:06,786 - cart_api - INFO - Response Status 404
+2026-06-08 22:32:06,794 - cart_api - INFO - POST http://testserver/cart/abc/checkout
+2026-06-08 22:32:06,795 - cart_api - WARNING - Validation Error on cart_id: Input should be a valid integer, unable to parse string as an integer
+2026-06-08 22:32:06,796 - cart_api - INFO - Response Status 422
+2026-06-08 22:32:06,800 - cart_api - INFO - DELETE http://testserver/cart/1
+2026-06-08 22:32:06,803 - cart_api - INFO - Response Status 404
+2026-06-08 22:32:06,810 - cart_api - INFO - GET http://testserver/invalid-secret-route
+2026-06-08 22:32:06,811 - cart_api - INFO - Response Status 404
+2026-06-08 22:34:52,224 - cart_api - INFO - GET http://testserver/products
+2026-06-08 22:34:52,225 - cart_api - INFO - Response Status 307
+2026-06-08 22:34:52,227 - cart_api - INFO - GET http://testserver/products/
+2026-06-08 22:34:52,238 - cart_api - INFO - Response Status 200
+2026-06-08 22:34:52,244 - cart_api - INFO - GET http://testserver/products?limit=5
+2026-06-08 22:34:52,244 - cart_api - INFO - Response Status 307
+2026-06-08 22:34:52,247 - cart_api - INFO - GET http://testserver/products/?limit=5
+2026-06-08 22:34:52,249 - cart_api - INFO - Response Status 200
+2026-06-08 22:34:52,255 - cart_api - INFO - GET http://testserver/products/1
+2026-06-08 22:34:52,258 - cart_api - INFO - Response Status 404
+2026-06-08 22:34:52,263 - cart_api - INFO - GET http://testserver/products/99999
+2026-06-08 22:34:52,264 - cart_api - INFO - Response Status 404
+2026-06-08 22:34:52,269 - cart_api - INFO - GET http://testserver/products/abc
+2026-06-08 22:34:52,270 - cart_api - WARNING - Validation Error on product_id: Input should be a valid integer, unable to parse string as an integer
+2026-06-08 22:34:52,271 - cart_api - INFO - Response Status 422
+2026-06-08 22:34:52,275 - cart_api - INFO - POST http://testserver/products
+2026-06-08 22:34:52,275 - cart_api - INFO - Response Status 307
+2026-06-08 22:34:52,278 - cart_api - INFO - POST http://testserver/products/
+2026-06-08 22:34:52,283 - cart_api - INFO - Response Status 201
+2026-06-08 22:34:52,288 - cart_api - INFO - POST http://testserver/products
+2026-06-08 22:34:52,288 - cart_api - INFO - Response Status 307
+2026-06-08 22:34:52,289 - cart_api - INFO - POST http://testserver/products/
+2026-06-08 22:34:52,291 - cart_api - WARNING - Validation Error on price: Field required
+2026-06-08 22:34:52,291 - cart_api - INFO - Response Status 422
+2026-06-08 22:34:52,296 - cart_api - INFO - POST http://testserver/products
+2026-06-08 22:34:52,296 - cart_api - INFO - Response Status 307
+2026-06-08 22:34:52,299 - cart_api - INFO - POST http://testserver/products/
+2026-06-08 22:34:52,301 - cart_api - INFO - Response Status 400
+2026-06-08 22:34:52,307 - cart_api - INFO - PUT http://testserver/products/1
+2026-06-08 22:34:52,314 - cart_api - INFO - Response Status 200
+2026-06-08 22:34:52,322 - cart_api - INFO - DELETE http://testserver/products/1
+2026-06-08 22:34:52,328 - cart_api - INFO - Response Status 204
+2026-06-08 22:34:52,335 - cart_api - INFO - POST http://testserver/cart/users/1/
+2026-06-08 22:34:52,338 - cart_api - INFO - Response Status 404
+2026-06-08 22:34:52,341 - cart_api - INFO - GET http://testserver/cart/1
+2026-06-08 22:34:52,346 - cart_api - INFO - Response Status 404
+2026-06-08 22:34:52,353 - cart_api - INFO - POST http://testserver/cart/1/items/
+2026-06-08 22:34:52,356 - cart_api - INFO - Response Status 404
+2026-06-08 22:34:52,361 - cart_api - INFO - POST http://testserver/cart/1/items/
+2026-06-08 22:34:52,364 - cart_api - INFO - Response Status 400
+2026-06-08 22:34:52,370 - cart_api - INFO - POST http://testserver/cart/1/items/
+2026-06-08 22:34:52,372 - cart_api - WARNING - Validation Error on product_id: Field required
+2026-06-08 22:34:52,372 - cart_api - INFO - Response Status 422
+2026-06-08 22:34:52,376 - cart_api - INFO - POST http://testserver/cart/1/checkout
+2026-06-08 22:34:52,379 - cart_api - INFO - Response Status 404
+2026-06-08 22:34:52,388 - cart_api - INFO - POST http://testserver/cart/abc/checkout
+2026-06-08 22:34:52,389 - cart_api - WARNING - Validation Error on cart_id: Input should be a valid integer, unable to parse string as an integer
+2026-06-08 22:34:52,390 - cart_api - INFO - Response Status 422
+2026-06-08 22:34:52,396 - cart_api - INFO - DELETE http://testserver/cart/1
+2026-06-08 22:34:52,399 - cart_api - INFO - Response Status 404
+2026-06-08 22:34:52,408 - cart_api - INFO - GET http://testserver/invalid-secret-route
+2026-06-08 22:34:52,410 - cart_api - INFO - Response Status 404
