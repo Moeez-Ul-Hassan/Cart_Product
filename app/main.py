@@ -6,9 +6,18 @@ from core.exception_handlers import global_exception_handler
 from core.logging import logger
 from fastapi.exceptions import RequestValidationError
 from core.exception_handlers import global_exception_handler, validation_exception_handler
+# Make sure you include it:
+# 1. Initialize App (THIS MUST COME FIRST)
+app = FastAPI(title="Cart Service API")
+
+# 2. Attach your routers now that 'app' exists
+app.include_router(product_router.router)
+app.include_router(cart_router.router)
+app.include_router(product_router.router)
+app.include_router(cart_router.router)
 
 # 1. Initialize DB Tables
-Base.metadata.create_all(bind=engine)
+# Base.metadata.create_all(bind=engine)
 
 # 2. Initialize App
 app = FastAPI(title="Cart Service API")

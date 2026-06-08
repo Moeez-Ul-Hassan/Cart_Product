@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from repositories import product_repository
-from schemas.product_schema import ProductCreate, StockUpdate
+from schemas.product_schema import ProductCreate, StockUpdate, ProductUpdate
 from repositories import product_repository, cart_repository
 from validators.validators import validate_price, validate_stock
 from exceptions.custom_exceptions import ResourceNotFoundError
@@ -79,6 +79,28 @@ def delete_product(db: Session, product_id: int):
         # Delete the product (Note: In a true 10/10 system, you would set product.is_deleted = True here instead)
         db.delete(product)
         db.commit()
+        
+    except Exception as e:
+        db.rollback()
+        raise e
+
+def update_product(db: Session, product_id: int, data: ProductUpdate):
+    try:
+        # 1. Find the product using your existing repository pattern
+        product = product_repository.get_product_for_update(db, product_id)
+        if not product:
+            raise ResourceNotFoundError("Product")
+        
+        # 2. Update only the fields the user provided
+        update_data = data.model_dump(exclude_unset=True)
+        for key, value in update_data.items():
+            setattr(product, key, value)
+            
+        # 3. Save to database
+        db.add(product)
+        db.commit()
+        db.refresh(product)
+        return product
         
     except Exception as e:
         db.rollback()
