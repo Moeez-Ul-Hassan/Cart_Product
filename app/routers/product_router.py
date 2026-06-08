@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 from database.database import get_db
+
 from schemas import product_schema
 from services import product_service
 
@@ -25,3 +26,7 @@ def update_stock(product_id: int, data: product_schema.StockUpdate, db: Session 
 @router.delete("/{product_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_product(product_id: int, db: Session = Depends(get_db)):
     product_service.delete_product(db, product_id)
+
+@router.put("/{product_id}", response_model=product_schema.ProductResponse)
+def update_product(product_id: int, data: product_schema.ProductUpdate, db: Session = Depends(get_db)):
+    return product_service.update_product(db, product_id, data)
