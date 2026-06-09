@@ -6,81 +6,70 @@ on:
       - main
 
 jobs:
-  # --- Phase 1: The Quality Gatekeeper (Testing & Analysis) ---
   test-and-scan:
     name: Run Tests & SonarCloud
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Crucial for SonarCloud to analyze git history
-
-      - name: Set up Python 3.12
-        uses: actions/setup-python@v5
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-
-      - name: Run Automated Pytest Matrix
+      - name: Run Pytest
         run: pytest -v tests/
-
-      - name: Execute SonarCloud Static Code Scan
+      - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-  # --- Phase 2: Continuous Integration (Build & Push) ---
   build-and-push:
     name: Build Docker Image
-    needs: test-and-scan # Only runs if Phase 1 passes perfectly
+    needs: test-and-scan
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Log in to Docker Hub
+      - uses: actions/checkout@v4
+      - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Build and Push FastAPI Image
+      - name: Build and Push
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          # Make sure this matches the image name in your docker-compose.yml!
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/cart-api:latest
 
-  # --- Phase 3: Continuous Deployment (AWS Server Update) ---
-  deploy:
-    name: Deploy to AWS EC2
-    needs: build-and-push # Only runs if Phase 2 builds successfully
+  deploy-green:
+    name: Deploy & Flip Traffic
+    needs: build-and-push
     runs-on: ubuntu-latest
     steps:
-      - name: Execute Remote SSH Commands
+      - name: SSH into Green Server
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.AWS_HOST }}
+          host: ${{ secrets.AWS_GREEN_HOST }}
           username: ubuntu
           key: ${{ secrets.AWS_SSH_KEY }}
           script: |
-            echo "Connected to AWS EC2 successfully!"
             cd ~/cart_apps
-            
-            # Pull any configuration changes (like updated docker-compose files)
-            git pull origin main
-            
-            # Pull the brand new Docker image we just built in Phase 2
             sudo docker compose pull api
-            
-            # Recreate the FastAPI container with zero downtime to the Database
             sudo docker compose up -d
-            
-            echo "Deployment Complete!"
+            # Allow time for the container to start and pass health checks
+            sleep 15
+
+      - name: Switch Traffic via Load Balancer
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: 'us-east-1'
+        run: |
+          aws elbv2 modify-listener --listener-arn ${{ secrets.ALB_LISTENER_ARN }} \
+          --default-actions Type=forward,TargetGroupArn=${{ secrets.TG_GREEN_ARN }}
+          echo "Traffic successfully flipped to Green environment!"
