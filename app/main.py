@@ -49,3 +49,8 @@ app.include_router(cart_router.router)
 @app.get("/")
 def health_check():
     return {"status": "Running smoothly."}
+
+@app.get("/health")
+def health_check():
+    # ALB will ping this. If it returns 200, the server is "Healthy"
+    return {"status": "ok"}
