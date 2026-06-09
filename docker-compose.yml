@@ -8,7 +8,7 @@ services:
       - "8000:8000"
     environment:
       # Dynamically injects the credentials from the environment
-      - DATABASE_URL=mysql+pymysql://${DB_USER}:${DB_PASSWORD}@db:3306/${DB_NAME}
+      - DATABASE_URL=mysql+pymysql://root:YOUR_ACTUAL_PASSWORD@db:3306/cart
       - PYTHONPATH=/app/app
     depends_on:
       db:
